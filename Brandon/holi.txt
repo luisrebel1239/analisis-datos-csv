@@ -1,0 +1,22 @@
+el número de incidentes por año
+df1.groupby('Year').count().plot(kind='bar', figsize=(10, 5))
+plt.title('Incidentes por año')
+plt.ylabel('Incidentes')
+plt.xlabel('Año')
+plt.show()
+
+
+fecha = fecha.str.split('/', expand=True)
+fecha.columns = ['mes','dia','año']
+fecha.head()
+
+
+
+
+nume_veces_operador_menor_accidentes = numero_veces_operador[numero_veces_operador < 320]
+
+#grafica con porcentajes 
+nume_veces_operador_menor_accidentes.plot(kind='pie', y='Operator', figsize=(10,10), autopct='%1.1f%%', startangle=90, shadow=False, labels=nume_veces_operador_menor_accidentes.index, legend = False, fontsize=14)
+plt.title('Operadores con menor número de accidentes', fontsize=20)
+plt.axis('equal')
+plt.show()
