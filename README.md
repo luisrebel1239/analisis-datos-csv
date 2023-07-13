@@ -20,3 +20,12 @@ Análisis de datos csv con Jupyter para IDS
 ```
     pip install matplotlib
 ```
+
+## Codec nesesario para la lectura correcta del archivo
+
+```
+df = pd.read_csv(
+    <file>,
+    encoding="latin1",
+)
+```
